@@ -8,28 +8,31 @@
     <title>Mail and Dice</title>
 </head>
 <body>
-    <div class="container col-12 col-md-6">
+    <div class="container">
         <div class="row">
-            <!-- Title -->
-            <div class="col-12 text-center">
-                <h2 class="display-4 fw-bold">ACCESS CHECKER</h2>
-            </div>
-            <!-- Input -->
-            <div class="col-12">
-                <div class="form-group">
-                    <label for="input-email">Enter Access</label>
-                    <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">Suggestion: pippo@gmail.com</small>
+            <!-- EMAIL CHECKER -->
+            <div class="col-12 col-md-6">
+                <!-- Title -->
+                <div class="content text-center mt-5">
+                    <h2 class="display-4 fw-bold">ACCESS CHECKER</h2>
                 </div>
-            </div>
-            <!-- Button -->
-            <div class="col-12 my-2">
-                <button id="check-access" class="btn btn-primary">Check Access</button>
-            </div>  
-            <!-- Access Box -->
-            <div class="col-12 my-4">
-                <div class="access-display access-grey" id="access-box">
-                    <h2 id="access-message"></h2>
+                <!-- Input -->
+                <div class="content my-4">
+                    <div class="form-group">
+                        <label for="input-email">Enter Access</label>
+                        <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">Suggestion: pippo@gmail.com</small>
+                    </div>
+                </div>
+                <!-- Button -->
+                <div class="content mb-4">
+                    <button id="check-access" class="btn btn-primary">Check Access</button>
+                </div>  
+                <!-- Access Box -->
+                <div class="content">
+                    <div class="access-display access-grey d-flex justify-content-center align-items-center" id="access-box">
+                        <h2 class="text-white" id="access-message">Unlock Access</h2>
+                    </div>
                 </div>
             </div>
         </div>

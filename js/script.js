@@ -1,6 +1,8 @@
 // ------------------------------
 //    CODICE ACCESSO CON EMAIL
 // ------------------------------
+document.getElementById("check-access").onclick = checkAccess;
+
 function checkAccess() {
     const authorized_emails_list = ["x", "pippo@gmail.com", "pluto@gmail.com", "tizio@gmail.com", "caio@gmail.com", "sempronio@gmail.com"];
     const user_email = document.getElementById("input-email").value;
@@ -17,12 +19,12 @@ function checkAccess() {
     const accessMessage = document.getElementById("access-message");
 
     if (access_granted) {
-        accessBox.className = 'access-display access-green';
+        accessBox.classList.remove("access-red");
+        accessBox.classList.add("access-green");
         accessMessage.textContent = "Access Consented";
     } else {
-        accessBox.className = 'access-display access-red';
+        accessBox.classList.remove("access-green");
+        accessBox.classList.add("access-red");
         accessMessage.textContent = "Access Denied";
     }
 }
-
-document.getElementById("check-access").onclick = checkAccess;
