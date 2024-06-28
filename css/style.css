@@ -3,16 +3,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px dashed red;
 }
 
 /* GENERAL CSS */
 body {
     height: 100vh;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
 }
 
 p, h1, h2, h3, h4 {
     margin: 0px;
+}
+
+/* Variables */
+:root {
+    --access-grey: lightsteelblue;
+    --access-green: lightgreen;
+    --access-red: lightcoral;
+    --bg-white: rgba(255, 255, 255, 0.2);
+    --shadow-color: rgba(0, 0, 0, 0.5);
 }
 
 /* EMAIL CHECKER CSS */
@@ -23,39 +35,41 @@ p, h1, h2, h3, h4 {
 }
 
 .access-grey {
-    background-color: grey;
+    background-color: var(--access-grey);
 }
 
 .access-green {
-    background-color: green;
+    background-color: var(--access-green);
 }
 
 .access-red {
-    background-color: red;
+    background-color: var(--access-red);
 }
 
-.email-checker{
-    background-color: pink;
-    border-radius: 20px;
+.email-checker, .dice-game {
+    background-color: var(--bg-white);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    box-shadow: 0 0 10px var(--shadow-color);
 }
 
+.email-checker button {
+    border: none;
+    border-radius: 10px;
+    padding: 6px 12px;
+    background-color: var(--bg-white);
+}
 
 /* DICE GAME CSS */
-.dice-game{
-    background-color: rgb(0, 255, 157);
-    border-radius: 20px;
-}
-
 .game img {
-    width: 30%;
+    width: 60%;
 }
 
 .game {
-    background-color: greenyellow;
-    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
-.winner {
+.match-info {
     border-radius: 30px;
-    width: 70%;
 }

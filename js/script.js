@@ -1,55 +1,37 @@
-// ------------------------------
-//    CODICE ACCESSO CON EMAIL
-// ------------------------------
-let checkAccessButton = document.getElementById("check-access");
-checkAccessButton.addEventListener("click", checkAccess);
+document.getElementById("check-access-btn").addEventListener("click", function () {
+    document.getElementById("email-form").reportValidity();
+    checkAccess();
+});
 
 function checkAccess() {
-    const authorized_emails_list = ["x", "pippo@gmail.com", "pluto@gmail.com", "tizio@gmail.com", "caio@gmail.com", "sempronio@gmail.com"];
-    const user_email = document.getElementById("input-email").value;
-    let access_granted = false;
-
-    for (let i = 0; i < authorized_emails_list.length; i++) {
-        if (user_email === authorized_emails_list[i]) {
-            access_granted = true;
-            break;
-        }
-    }
+    const authorizedEmails = ["pippo@gmail.com", "pluto@gmail.com", "tizio@gmail.com", "caio@gmail.com", "sempronio@gmail.com"];
+    const userEmail = document.getElementById("input-email").value;
+    const accessGranted = authorizedEmails.includes(userEmail);
 
     const accessBox = document.getElementById("access-box");
     const accessMessage = document.getElementById("access-message");
 
-    if (access_granted) {
-        accessBox.classList.remove("access-red");
-        accessBox.classList.add("access-green");
-        accessMessage.textContent = "Access Consented";
-    } else {
-        accessBox.classList.remove("access-green");
-        accessBox.classList.add("access-red");
-        accessMessage.textContent = "Access Denied";
-    }
+    accessBox.classList.toggle("access-green", accessGranted);
+    accessBox.classList.toggle("access-red", !accessGranted);
+    accessMessage.textContent = accessGranted ? "Access Consented" : "Access Denied";
 }
 
-
-
-// ------------------------------
-//    CODICE GIOCO DEI DADI
-// ------------------------------
-diceGame();
+document.getElementById('dice').addEventListener('click', diceGame);
 
 function diceGame() {
-    let player_roll = Math.floor(Math.random() * 6) + 1;
-    let computer_roll = Math.floor(Math.random() * 6) + 1;
+    const playerRoll = Math.ceil(Math.random() * 6);
+    const computerRoll = Math.ceil(Math.random() * 6);
 
-    console.log("Il Giocatore ha tirato: " + player_roll);
-    console.log("Il Computer ha tirato: " + computer_roll);
+    const scoreElement = document.getElementById('score');
+    scoreElement.textContent = `${playerRoll} - ${computerRoll}`;
 
-    if (player_roll > computer_roll) {
-        console.log("Il vincitore è: Giocatore");
-    } else if (computer_roll > player_roll) {
-        console.log("Il vincitore è: Computer");
+    const winnerElement = document.getElementById('winner');
+
+    if (playerRoll > computerRoll) {
+        winnerElement.textContent = "Giocatore";
+    } else if (computerRoll > playerRoll) {
+        winnerElement.textContent = "Computer";
     } else {
-        console.log("È un pareggio! Ripeti il lancio dei dadi.");
-        diceGame();
+        winnerElement.textContent = "Pareggio";
     }
 }
