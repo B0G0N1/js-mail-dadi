@@ -22,3 +22,25 @@ Consigli del giorno:
 4. torniamo a scrivere in italiano
 5. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 Buon lavoro e buon divertimento!
+
+
+
+<!----------------------
+    PSEUDO CODICE MAIL
+------------------------>
+1.  Definire una lista di email autorizzate:
+    authorized_emails_list = ["email1@example.com", "email2@example.com", "email3@example.com", ...]
+2.  Chiedere all'utente di inserire la sua email:
+    user_email = INPUT("Inserisci la tua email: ")
+3.  Impostare una variabile di controllo a falso:
+    access_granted = FALSO
+4.  Controllare attraverso la lista di email autorizzate:
+    PER OGNI email IN authorized_emails_list:
+        SE user_email è UGUALE A email:
+            access_granted = VERO
+            INTERROMPI IL ciclo
+5.  Controllare il risultato del controllo:
+    SE access_granted è VERO:
+        STAMPA "Accesso consentito"
+    ALTRIMENTI:
+        STAMPA "Accesso negato"
