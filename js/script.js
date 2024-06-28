@@ -34,20 +34,21 @@ function checkAccess() {
 // ------------------------------
 //    CODICE GIOCO DEI DADI
 // ------------------------------
-let player_roll = Math.floor(Math.random() * 6) + 1;
-let computer_roll = Math.floor(Math.random() * 6) + 1;
-let winner;
+function diceGame() {
+    let player_roll = Math.floor(Math.random() * 6) + 1;
+    let computer_roll = Math.floor(Math.random() * 6) + 1;
 
-console.log("Il Giocatore ha tirato: " + player_roll);
-console.log("Il Computer ha tirato: " + computer_roll);
+    console.log("Il Giocatore ha tirato: " + player_roll);
+    console.log("Il Computer ha tirato: " + computer_roll);
 
-if (player_roll > computer_roll) {
-    winner = "Giocatore";
-    console.log("Il vincitore è: " + winner);
-} else if (computer_roll > player_roll) {
-    winner = "Computer";
-    console.log("Il vincitore è: " + winner);
-} else {
-    winner = "Pareggio";
-    console.log("È un pareggio!");
+    if (player_roll > computer_roll) {
+        console.log("Il vincitore è: Giocatore");
+    } else if (computer_roll > player_roll) {
+        console.log("Il vincitore è: Computer");
+    } else {
+        console.log("È un pareggio! Ripeti il lancio dei dadi.");
+        tiraDadi();
+    }
 }
+
+diceGame();
