@@ -25,9 +25,9 @@ Buon lavoro e buon divertimento!
 
 
 
-<!----------------------
-    PSEUDO CODICE MAIL
------------------------->
+<!--------------------------------
+    PSEUDO CODICE ACCESSO EMAIL
+--------------------------------->
 1.  Definire una lista di email autorizzate:
     authorized_emails_list = ["email1@example.com", "email2@example.com", "email3@example.com", ...]
 2.  Chiedere all'utente di inserire la sua email:
@@ -44,3 +44,28 @@ Buon lavoro e buon divertimento!
         STAMPA "Accesso consentito"
     ALTRIMENTI:
         STAMPA "Accesso negato"
+
+
+
+
+<!---------------------------------
+    PSEUDO CODICE GIOCO DEI DADI
+---------------------------------->
+1.  Generare un numero random per il giocatore:
+    player_roll = GeneraNumeroRandom(1, 6)
+2.  Generare un numero random per il computer:
+    computer_roll = GeneraNumeroRandom(1, 6)
+3.  Determinare il vincitore:
+    SE player_roll > computer_roll:
+        winner = "Giocatore"
+    ALTRIMENTI SE computer_roll > player_roll:
+        winner = "Computer"
+    ALTRIMENTI:
+        winner = "Pareggio"
+4. Mostrare i risultati:
+    STAMPA "Giocatore ha tirato: " + player_roll
+    STAMPA "Computer ha tirato: " + computer_roll
+    SE winner è "Pareggio":
+        STAMPA "È un pareggio!"
+    ALTRIMENTI:
+        STAMPA "Il vincitore è: " + winner
