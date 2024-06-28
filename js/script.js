@@ -1,7 +1,8 @@
 // ------------------------------
 //    CODICE ACCESSO CON EMAIL
 // ------------------------------
-document.getElementById("check-access").onclick = checkAccess;
+let checkAccessButton = document.getElementById("check-access");
+checkAccessButton.addEventListener("click", checkAccess);
 
 function checkAccess() {
     const authorized_emails_list = ["x", "pippo@gmail.com", "pluto@gmail.com", "tizio@gmail.com", "caio@gmail.com", "sempronio@gmail.com"];
@@ -34,6 +35,8 @@ function checkAccess() {
 // ------------------------------
 //    CODICE GIOCO DEI DADI
 // ------------------------------
+diceGame();
+
 function diceGame() {
     let player_roll = Math.floor(Math.random() * 6) + 1;
     let computer_roll = Math.floor(Math.random() * 6) + 1;
@@ -47,8 +50,6 @@ function diceGame() {
         console.log("Il vincitore è: Computer");
     } else {
         console.log("È un pareggio! Ripeti il lancio dei dadi.");
-        tiraDadi();
+        diceGame();
     }
 }
-
-diceGame();
