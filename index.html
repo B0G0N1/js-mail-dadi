@@ -17,17 +17,24 @@
             <!-- Input -->
             <div class="col-12">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Enter Access</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <label for="input-email">Enter Access</label>
+                    <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="Enter email">
                     <small id="emailHelp" class="form-text text-muted">Suggestion: pippo@gmail.com</small>
                 </div>
             </div>
-            <!-- Accesso Box -->
+            <!-- Button -->
+            <div class="col-12 my-2">
+                <button id="check-access" class="btn btn-primary">Check Access</button>
+            </div>  
+            <!-- Access Box -->
             <div class="col-12 my-4">
-                <div class="access-box"></div>
+                <div class="access-display access-grey" id="access-box">
+                    <h2 id="access-message"></h2>
+                </div>
             </div>
         </div>
     </div>
     <!-- Collego lo script al documento -->
+    <script src="./js/script.js"></script>
 </body>
 </html>
