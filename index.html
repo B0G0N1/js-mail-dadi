@@ -21,7 +21,7 @@
                     <!-- Input -->
                     <div class="mt-2">
                         <div class="form-group">
-                            <label for="input-email"></label>
+                            <label for="input-email" class="visually-hidden">Email address</label>
                             <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="Enter email" required>
                             <small id="emailHelp" class="form-text text-muted ms-1">Suggestion: pippo@gmail.com</small>
                         </div>
@@ -52,7 +52,7 @@
                         <h3>Player</h3>
                     </div>
                     <div class="col-4 text-center">
-                        <img src="./img/dice.png" id="dice" alt="dice" style="cursor: pointer;">
+                        <img src="./img/dice.png" id="dice" alt="dice" class="img-fluid" style="cursor: pointer;">
                     </div>
                     <div class="col-4 d-flex flex-column align-items-center justify-content-center">
                         <i class="fa-solid fa-desktop fs-1"></i>
@@ -61,7 +61,7 @@
                 </div>
                 <!-- Winner and Score -->
                 <div class="d-flex flex-column align-items-center">
-                    <p class="form-text  text-center text-muted my-3">Click on Dice for Play</p>
+                    <p class="form-text text-center text-muted my-3">Click on Dice to Play</p>
                     <div class="match-info d-flex bg-white py-2 px-3 my-3 w-75">
                         <div class="col-6 text-center">
                             <p>Il vincitore è:</p>
@@ -70,7 +70,7 @@
                             <p id="winner"></p>
                         </div>
                     </div>
-                    <div class="d-flex w-75">
+                    <div class="d-flex px-3 w-75">
                         <div class="col-6 text-center">
                             <p>Score:</p>
                         </div>
@@ -82,7 +82,7 @@
             </div>
         </div>
     </div>
-    <!-- Collego lo script al documento -->
+    <!-- Link scripts at the end for better performance -->
     <script src="./js/script.js"></script>
 </body>
 </html>
