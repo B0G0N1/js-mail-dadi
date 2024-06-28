@@ -28,3 +28,26 @@ function checkAccess() {
         accessMessage.textContent = "Access Denied";
     }
 }
+
+
+
+// ------------------------------
+//    CODICE GIOCO DEI DADI
+// ------------------------------
+let player_roll = Math.floor(Math.random() * 6) + 1;
+let computer_roll = Math.floor(Math.random() * 6) + 1;
+let winner;
+
+console.log("Il Giocatore ha tirato: " + player_roll);
+console.log("Il Computer ha tirato: " + computer_roll);
+
+if (player_roll > computer_roll) {
+    winner = "Giocatore";
+    console.log("Il vincitore è: " + winner);
+} else if (computer_roll > player_roll) {
+    winner = "Computer";
+    console.log("Il vincitore è: " + winner);
+} else {
+    winner = "Pareggio";
+    console.log("È un pareggio!");
+}
